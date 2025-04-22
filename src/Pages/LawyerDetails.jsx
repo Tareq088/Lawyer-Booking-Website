@@ -1,5 +1,7 @@
-import React, { useLayoutEffect } from 'react';
+import React from 'react';
 import { useLoaderData, useParams } from 'react-router';
+import exclamatoryImage from'../assets/exclamatory.png';
+import Button from '../Components/UI/Button';
 
 const LawyerDetails = () => {
     const LawyersData = useLoaderData();
@@ -19,41 +21,52 @@ const LawyerDetails = () => {
                 <h2 className='text-3xl font-extrabold'>Lawyer’s Profile Details</h2>
                 <p className='tex-base mt-4 mb-8'>A lawyer, also known as an attorney, is a legal professional who provides advice, representation, and legal <br /> services to individuals, businesses, and organizations.</p>
             </div>
-            <br /><br />
-            <div className='p-7 rounded-2xl'>
-                <div className="flex">
-                <div className='bg-gray-100 rounded-xl p-6 w-[20%]'>
-                     <img className='w-27 h-27 rounded-full object-cover' src={photo}  alt="Lawyer Photo" /> 
-                </div>
-
-                <div className='w-[75%] space-y-0'>   
-                        <p className='inline-block py-1 px-3 border rounded-3xl text-sm bg-blue-100 text-blue-900'>  {workingExperience}</p>
-
-                    <h2 className="text-xl font-extrabold">{name}</h2>
+            <br />
+            <div className='p-7 border border-gray-300 rounded-2xl'>
+                <div className="flex gap-20 items-center">
+                    <div className='bg-gray-100 rounded-xl p-6 w-[23%]'>
+                        <img className='w-60 h-60 rounded-full object-cover' src={photo}  alt="Lawyer Photo" /> 
+                    </div>
+                    <div className='w-[75%] space-y-2'>   
+                    <p className='inline-block py-1 px-3 rounded-3xl text-sm bg-blue-100 text-blue-900'>  {workingExperience}</p>
+                    <h2 className="text-3xl font-extrabold">{name}</h2>
                     <div className='flex gap-10'>
                         <p className='text-base text-gray-400'>{expert}</p>
-                        <p className='flex gap-2  text-gray-500 my-1'> <span>&#174;</span>  License No: {licenseNo}</p>
+                        <p className='text-base flex gap-2  text-gray-500 my-1'> <span>&#174;</span>  License No: {licenseNo}</p>
                     </div>
                     <div className='flex gap-2'>
-                        <p>Availability</p>
-                        <p className=' py-1 px-3 border rounded-3xl text-sm bg-blue-100 text-blue-900'>  Saturday </p>
-                        <p className=' py-1 px-3 border rounded-3xl text-sm bg-blue-100 text-blue-900'>  Sunday </p>
-                        <p className=' py-1 px-3 border rounded-3xl text-sm bg-blue-100 text-blue-900'>  Monday </p>
+                        <p className='font-bold'>Availability</p>
+                        <p className=' py-1 px-3 rounded-3xl text-sm bg-amber-50 text-amber-500 cursor-pointer'>  Saturday </p>
+                        <p className=' py-1 px-3 rounded-3xl text-sm bg-amber-50 text-amber-500 cursor-pointer'>  Sunday </p>
+                        <p className=' py-1 px-3 rounded-3xl text-sm bg-amber-50 text-amber-500 cursor-pointer'>  Monday </p>
                     </div>
                     <div className='flex gap-2'>
-                        <p>Consultation Fee:</p>
-                        <p>Taka: {visitPrice.split(" ")[1]}</p>
+                        <p className='font-bold'>Consultation Fee:</p>
+                                {/* taka. 400 dewa ache visitPrice e: tai age split kore taka lekha bad dilam */}
+                        <p className='text-green-800 font-bold'>Taka: {visitPrice.split(" ")[1]}</p>
                     </div>
 
-                    {/* <Link to={`/lawyer-details/${id}`}>
-                    <button 
-                        className="btn border-blue-700 text-blue-800 w-full rounded-4xl hover:text-white hover:bg-blue-700">View Details
-                    </button>
-                    </Link> */}
-               
-                </div>
+                    </div>
                 
                 </div>
+            </div>
+            <br />
+            <div className='p-7 border border-gray-300 rounded-2xl'>
+                <h2 className='text-xl font-extrabold text-center'>Book an Appointment</h2>
+                <hr className='text-gray-500 border-dotted w-full my-3'/>
+                <div className='flex justify-between items-center'>
+                    <p className='font-bold'>Availability</p>
+                    <p className=' py-1 px-3 border border-green-300 rounded-3xl text-sm font-bold bg-green-100 text-green-700 cursor-pointer'>  Lawyer Available Today </p>
+                </div>
+                <hr className='text-gray-500 border w-full my-3'/>
+                <div className='inline-flex gap-3 py-1 px-3 rounded-3xl text-sm bg-red-50 text-amber-400 cursor-pointer mb-2'>
+                    <img src={exclamatoryImage} className='w-5' alt="" /> 
+                    <p className=''> 
+                        Due to high patient volume, we are currently accepting appointments for today only. We appreciate your understanding and cooperation. </p>
+                </div>
+                <button href="#_" className="inline-flex items-center justify-center w-full px-8 py-3 text-lg font-bold leading-6 text-white bg-green-600 border border-transparent rounded-full hover:bg-green-500 focus:outline-none focus:ring-green-600 cursor-pointer">
+                    Book Appointment Now
+                </button>
             </div>
         </div>
     );
