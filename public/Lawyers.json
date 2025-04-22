@@ -1,0 +1,111 @@
+[
+    {
+      "id": 1,
+      "licenseNo": "BD-2010-140",
+      "name": "Zarif Kabir",
+      "workingExperience": "Approximately 5+ years",
+      "visitPrice": "TK. 3000",
+      "photo": "https://as1.ftcdn.net/v2/jpg/00/69/90/62/1000_F_69906272_95xqHEpDgZTq2MUBHKMUtO4vB3uyIxHI.jpg",
+      "expert": "Criminal Law Expert"
+    },
+    {
+      "id": 2,
+      "licenseNo": "BD-2020-1400",
+      "name": "Shawkat Hasan",
+      "workingExperience": "Approximately 4+ years",
+      "visitPrice": "TK. 1500",
+      "photo": "https://as2.ftcdn.net/v2/jpg/05/74/16/67/1000_F_574166743_PqwsTG5iXeZPIUoQlmrHwzo8aOwjn0aw.jpg",
+       "expert": "Civil Law Expert"
+    },
+    {
+      "id": 3,
+      "licenseNo": "BD-2021-140050",
+      "name": "Mohammad Shahidul Islam",
+      "workingExperience": "Over 19+ years",
+      "visitPrice": "TK. 5000",
+      "photo": "https://as1.ftcdn.net/v2/jpg/06/37/89/36/1000_F_637893698_HGTSiZIq60cMiytN464qYFWmyGMqWnp8.jpg",
+       "expert": "Family Law Expert"
+    },
+    {
+      "id": 4,
+      "licenseNo": "BD-2022-1450900",
+      "name": "Imran Nafiz",
+      "workingExperience": "Approximately 3+ years",
+      "visitPrice": "TK. 1000",
+      "photo": "https://as1.ftcdn.net/v2/jpg/06/21/32/94/1000_F_621329409_9hVy0HARwNtHSyzWGmunsJswqApvKbWb.jpg",
+       "expert": "Civil Litigation Expert"
+    },
+    {
+      "id": 5,
+      "licenseNo": "BD-2023-1450900",
+      "name": "Barrister Shajib Mahmood Alam",
+      "workingExperience": "Over 8+ years",
+      "visitPrice": "TK. 4500",
+      "photo": "https://as1.ftcdn.net/v2/jpg/07/05/57/76/1000_F_705577624_1E96mDMiMqcX2lrg2P9wcUxhIwkD9qjO.jpg",
+       "expert": "Corporate Law Expert"
+    },
+    {
+      "id": 6,
+      "licenseNo": "BD-2024-145550",
+      "name": "Khan Khalid Adnan",
+      "workingExperience": "Over 25+ years",
+      "visitPrice": "TK. 5500",
+      "photo": "https://as2.ftcdn.net/v2/jpg/04/64/87/43/1000_F_464874339_Rc7McGaz327ljzgnWgke4crdDAdI2Yu2.jpg",
+       "expert": "Human Rights Law Expert"
+    },
+    {
+      "id": 7,
+      "licenseNo": "BD-20210-14552350",
+      "name": "Shahdeen Malik",
+      "workingExperience": "Over 30+ years",
+      "visitPrice": "TK. 2500",
+      "photo": "https://as2.ftcdn.net/v2/jpg/06/34/07/69/1000_F_634076947_3fFHfS9uerMpLWIVJi8jSNHbwJSsAm26.jpg",
+       "expert": "Criminal Law Expert"
+    },
+    {
+      "id": 8,
+      "licenseNo": "BD-20210-145250",
+      "name": "Mydul Haque Khan",
+      "workingExperience": "Over 15+ years",
+      "visitPrice": "TK. 5000",
+      "photo": "https://as2.ftcdn.net/jpg/02/95/96/79/1000_F_295967926_T2nUnmhQc00dwwp3KsvJSPHMP2xhekry.jpg",
+       "expert": "Civil Law Expert"
+    },
+    {
+      "id": 9,
+      "licenseNo": "BD-20210-14553550",
+      "name": "Tania Amir",
+      "workingExperience": "Over 5+ years",
+      "visitPrice": "TK. 3000",
+      "photo": "https://as1.ftcdn.net/v2/jpg/06/33/61/80/1000_F_633618049_dNfpOtGMtkxm4p7mcOduafXwKELhuvi9.jpg",
+       "expert": "Family Law Expert"
+    },
+    {
+      "id": 10,
+      "licenseNo": "BD-20210-14535450",
+      "name": "Asif Bin Anwar",
+      "workingExperience": "Over 10+ years",
+      "visitPrice": "TK. 2200",
+      "photo": "https://as2.ftcdn.net/v2/jpg/06/26/62/09/1000_F_626620977_FtXE6zwMoB3HgoS54Ez7VFI5YPQIjLP6.jpg",
+       "expert": "International Law Expert"
+    },
+    {
+      "id": 11,
+      "licenseNo": "BD-20210-1453550",
+      "name": "AF Hassan Ariff",
+      "workingExperience": "Over 5+ years",
+      "visitPrice": "TK. 1500",
+      "photo": "https://as2.ftcdn.net/v2/jpg/06/26/62/09/1000_F_626620990_d8BPqnUeGL2IIRuAd963WPGidffxxdmi.jpg",
+       "expert": "Criminal Law Expert"
+    },
+    {
+      "id": 12,
+      "licenseNo": "BD-20210-1455670",
+      "name": "Imtiaz Uddin Ahmad Asif",
+      "workingExperience": "Over 2+ years",
+      "visitPrice": "TK. 3500",
+      "photo": "https://as1.ftcdn.net/v2/jpg/10/91/68/52/1000_F_1091685218_ratVYiyMnZQIBONkwPnNiZi4mxBllrkx.jpg",
+       "expert": "Civil Law Expert"
+    }
+  ]
+  
