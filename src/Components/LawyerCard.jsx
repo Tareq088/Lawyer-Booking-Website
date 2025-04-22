@@ -8,7 +8,7 @@ const LawyerCard = ({lawyer}) => {
     return (
         <div>
             <div className='flex gap-7 shadow-md rounded-2xl p-4 mb-10'>
-                <div className='bg-gray-100 rounded-xl px-6 pt-6 w-[20%'>
+                <div className='bg-gray-100 rounded-xl p-6  w-[27%] flex justify-center items-center'>
                      <img className='w-27 h-25 rounded-full object-cover' src={photo}  alt="Lawyer Photo" /> 
                 </div>
                 <div className='w-[75%] space-y-0 '>   

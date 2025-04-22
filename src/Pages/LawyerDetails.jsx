@@ -23,22 +23,25 @@ const LawyerDetails = () => {
             </div>
             <br />
             <div className='p-7 border border-gray-300 rounded-2xl'>
-                <div className="flex gap-20 items-center">
-                    <div className='bg-gray-100 rounded-xl p-6 w-[23%]'>
-                        <img className='w-60 h-60 rounded-full object-cover' src={photo}  alt="Lawyer Photo" /> 
+                <div className="flex flex-col sm:flex-row gap-5 md:gap-10 lg:gap-20 items-center">
+                    <div className='bg-gray-100 rounded-xl p-3 sm:p-6 sm:w-20% md:w-[30%] lg:w-[35%] flex justify-center items-center'>
+                        <img className='w-30 h-30 sm:w-30 sm:h-30  md:w-40 md:h-40 lg:w-60 lg:h-60 rounded-full object-cover' src={photo}  alt="Lawyer Photo" /> 
                     </div>
                     <div className='w-[75%] space-y-2'>   
                     <p className='inline-block py-1 px-3 rounded-3xl text-sm bg-blue-100 text-blue-900'>  {workingExperience}</p>
-                    <h2 className="text-3xl font-extrabold">{name}</h2>
-                    <div className='flex gap-10'>
+                    <h2 className="text-xl md:text-3xl font-extrabold">{name}</h2>
+                    <div className='flex flex-col sm:flex-row sm:gap-10 sm:items-center'>
                         <p className='text-base text-gray-400'>{expert}</p>
                         <p className='text-base flex gap-2  text-gray-500 my-1'> <span>&#174;</span>  License No: {licenseNo}</p>
                     </div>
-                    <div className='flex gap-2'>
+                    <div className='flex flex-col sm:flex-row sm:gap-2'>
                         <p className='font-bold'>Availability</p>
-                        <p className=' py-1 px-3 rounded-3xl text-sm bg-amber-50 text-amber-500 cursor-pointer'>  Saturday </p>
-                        <p className=' py-1 px-3 rounded-3xl text-sm bg-amber-50 text-amber-500 cursor-pointer'>  Sunday </p>
-                        <p className=' py-1 px-3 rounded-3xl text-sm bg-amber-50 text-amber-500 cursor-pointer'>  Monday </p>
+                        <div className='flex'>
+                            <p className=' py-1 px-3 rounded-3xl text-sm bg-amber-50 text-amber-500 cursor-pointer'>  Saturday </p>
+                            <p className=' py-1 px-3 rounded-3xl text-sm bg-amber-50 text-amber-500 cursor-pointer'>  Sunday </p>
+                            <p className=' py-1 px-3 rounded-3xl text-sm bg-amber-50 text-amber-500 cursor-pointer'>  Monday </p>
+                        </div>
+
                     </div>
                     <div className='flex gap-2'>
                         <p className='font-bold'>Consultation Fee:</p>
@@ -60,7 +63,7 @@ const LawyerDetails = () => {
                 </div>
                 <hr className='text-gray-500 border w-full my-3'/>
                 <div className='inline-flex gap-3 py-1 px-3 rounded-3xl text-sm bg-red-50 text-amber-400 cursor-pointer mb-2'>
-                    <img src={exclamatoryImage} className='w-5' alt="" /> 
+                    <img src={exclamatoryImage} className='w-5 h-5' alt="" /> 
                     <p className=''> 
                         Due to high patient volume, we are currently accepting appointments for today only. We appreciate your understanding and cooperation. </p>
                 </div>
