@@ -19,10 +19,11 @@ export const router = createBrowserRouter([
             loader: () => fetch("../Lawyers.json"),
           },
           {
-            path: "/lawyer-details",
+            path: "/lawyer-details/:id",
+            hydrateFallbackElement:<p>Loading......................................</p>,
             Component: LawyerDetails,
+            loader: ()=>fetch("../Lawyers.json")
           },
- 
           {
             path:"/blogs",
             Component: Blogs

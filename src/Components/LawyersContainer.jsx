@@ -7,7 +7,7 @@ const LawyersContainer = ({lawyersData}) => {
     // console.log(lawyersData);
     const [showAll, setShowAll] = useState(false)
     const [displayLawyers, setDisplayLawyers] = useState([])
-    console.log(showAll)
+    // console.log(showAll)
     useEffect( ()=>{
         if(showAll){
             setDisplayLawyers(lawyersData);
@@ -25,15 +25,17 @@ const LawyersContainer = ({lawyersData}) => {
                                         <LawyerCard 
                                         key={lawyer.id}
                                         lawyer={lawyer}>
-
                                         </LawyerCard>)
             }
             </div>
             <div className='text-center mt-10'>
                 <Button
                     type='submit'
+                        //onClick kintu eventHandler na. eta props hisebe pathabo ja button component e giye age destructure {} korchi and then onClick eventHnalder = {use korechi ekahne}
                     onClick = { ()=>setShowAll(!showAll) } 
-                    label="Show All Lawyer"></Button>
+                    label="Show All Lawyer">
+
+                </Button>
             </div>
      
         </div>
