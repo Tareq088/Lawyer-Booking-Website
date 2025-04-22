@@ -18,7 +18,7 @@ const LawyerCard = ({lawyer}) => {
                     <h2 className="text-xl font-extrabold">{name}</h2>
                     <p className='text-base text-gray-400'>{expert}</p>
                     <hr className='border-dotted  w-fll h-1'/>
-                    <p className='flex gap-2  text-gray-500 my-1'> <p>&#174;</p>  License No: {licenseNo}</p>
+                    <p className='flex gap-2  text-gray-500 my-1'> <span>&#174;</span>  License No: {licenseNo}</p>
                     <button className="btn border-blue-700 text-blue-800 w-full rounded-4xl hover:text-white hover:bg-blue-700">View Details</button>               
                 </div>
 
