@@ -26,11 +26,15 @@ export const router = createBrowserRouter([
           },
           {
             path:"/blogs",
-            Component: Blogs
+            hydrateFallbackElement:<p>Q/A Loading......................................</p>,
+            Component: Blogs,
+            loader: ()=>fetch("../quesAns.json")
           },
           {
             path:"/booking",
-            Component: Booking
+     
+            Component: Booking,
+           
           },
 
           // {
