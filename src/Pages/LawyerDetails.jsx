@@ -13,7 +13,7 @@ const LawyerDetails = () => {
     const singleLawyerData = LawyersData.find(lawyer => lawyer.id === parseInt(id));
     console.log(singleLawyerData)
             // singleLawyerData er data destructure korchi
-    const {name, licenseNo, workingExperience,photo,expert, visitPrice} = singleLawyerData || {};
+    const {name, licenseNo, workingExperience,photo,expert, visitPrice,available} = singleLawyerData || {};
             //ui er jonno: book e click korle lawyer er data kono ekjaigate rakhbo
    const handleBooking = (singlerLawyer) =>{
     // setLawyeBooking([...lawyerBooking, singleLawyer])
@@ -33,7 +33,7 @@ const LawyerDetails = () => {
             {
                 idFound === false?
                 (
-                    <div className='flex flex-col items-center space-y-5 p-2'>
+                    <div className='flex flex-col items-center space-y-5 p-2 mb-7'>
                         <h1 className='text-9xl text-red-700 font-extrabold mt-10 mb-5'>404</h1>
                         <p>Oops! The page You are looking for doesn't exist.</p>
                         <Link to='/'><Button label='Go Back Home'></Button></Link>
@@ -60,12 +60,16 @@ const LawyerDetails = () => {
                             </div>
                             <div className='flex flex-col sm:flex-row sm:gap-2'>
                                 <p className='font-bold'>Availability</p>
-                                <div className='flex'>
-                                    <p className=' py-1 px-3 rounded-3xl text-sm bg-amber-50 text-amber-500 cursor-pointer'>  Saturday </p>
-                                    <p className=' py-1 px-3 rounded-3xl text-sm bg-amber-50 text-amber-500 cursor-pointer'>  Sunday </p>
-                                    <p className=' py-1 px-3 rounded-3xl text-sm bg-amber-50 text-amber-500 cursor-pointer'>  Monday </p>
+                                <div className='flex gap-1'>
+                                    {
+                                        available.map((day,index)=> {return(
+                                            <div key={index}>
+                                                <p className=' py-1 px-3 rounded-3xl text-sm bg-amber-50 text-amber-500 cursor-pointer'>  {day} </p>
+                                            </div>
+                                        )
+                                        })
+                                    }
                                 </div>
-
                             </div>
                             <div className='flex gap-2'>
                                 <p className='font-bold'>Consultation Fee:</p>

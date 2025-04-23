@@ -21,7 +21,7 @@ const Navbar = () => {
                         <li className='text-lg'><NavLink className={({ isActive }) => isActive ? 'underline decoration-solid font-bold' : ''} to="/*"> Contact</NavLink></li>
                     </ul>
                     </div>
-                    <div className='flex items gap-2'>
+                    <div className='flex items-center gap-2'>
                     <img src={logoImg} alt="Logo png" />
                     <Link className="text-xl font-bold" to='/'>Law.BD</Link>
                     </div>
