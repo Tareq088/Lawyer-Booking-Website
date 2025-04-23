@@ -1,19 +1,19 @@
 [
     {
         "question" : "What is useState and how does it work in React?",
-        "answer" : "useState is a React Hook that enables functional components to manage state. It provides a way to declare state variables and update them, triggering re-renders of the component when the state changes. The Hook takes an initial state value as an argument. During the initial render, the current state is set to this initial value. Subsequent calls to the setter function update the state, and React re-renders the component with the new state value. "
+        "answer" : "useState is a React Hook which consists of 2 elements : one is a initial value and we can update it through a function which is the second element. "
     },
     {
         "question" : "What is the purpose of useEffect in React?",
-        "answer" : "The useEffect hook in React is purposed to manage side effects in functional components. Side effects refer to actions that interact with elements outside the React component's normal rendering flow, such as fetching data from an API, manipulating the DOM directly, or setting up timers. useEffect essentially combines the functionality of componentDidMount, componentDidUpdate, and componentWillUnmount lifecycle methods from class-based components into a single API for functional components. "
+        "answer" : "if there is any dynamic value and for which we need to update any element we need useEffect Hook. "
     },
     {
         "question" : "What is a custom hook in React and when should you use one?",
-        "answer" : "A custom hook in React is a function, named starting with 'use', that encapsulates stateful logic or side effects that can be reused across multiple components. It allows extracting and sharing logic that involves React hooks (like useState, useEffect, useContext) without repeating code.we use it to reduce code writing."
+        "answer" : " A custom hook in React is a hook which is not predefined and we can declare and use it according to serve our purpose and reduce codes length"
     },
     {
         "question" : "Difference between controlled and uncontrolled components. Which one is better?",
-        "answer" : "Controlled components offer more control and flexibility, particularly for dynamic forms and data-driven applications. Uncontrolled components can be simpler for straightforward scenarios, especially when integrating with existing non-React code. controlled has advantage in  Validation logic can be easily implemented within the component's state updates, allowing for immediate feedback to the user. uncontrolled is Simpler to implement and manage, especially for basic forms. "
+        "answer" : "Controlled components gives us the data in every time after any change event occurs using onChange, but uncontrolled gives us the data after the total change. "
     },
     {
         "question" : "Tell us something about useFormStatus() in React.",
