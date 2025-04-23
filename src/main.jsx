@@ -4,10 +4,16 @@ import './index.css'
 import {RouterProvider} from "react-router";
 import { router } from './routes/routes.jsx';
 
+import { ToastContainer } from 'react-toastify';
+
+
 
 createRoot(document.getElementById('root')).render(
 
-    <RouterProvider router={router}></RouterProvider>,
+    <RouterProvider router={router}>
+        
+    </RouterProvider>,
+
     
 
 )

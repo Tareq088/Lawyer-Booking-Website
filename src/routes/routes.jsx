@@ -32,7 +32,7 @@ export const router = createBrowserRouter([
           },
           {
             path:"/booking",
-     
+
             Component: Booking,
            
           },

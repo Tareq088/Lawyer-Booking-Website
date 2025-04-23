@@ -1,19 +1,36 @@
 import React from 'react';
-import { useLoaderData, useParams } from 'react-router';
+import { Link, useLoaderData, useParams} from 'react-router';
 import exclamatoryImage from'../assets/exclamatory.png';
 import Button from '../Components/UI/Button';
 
+import { addBooking } from '../Utilities';
+import {toast} from 'react-toastify';
+// import toast from 'react-hot-toast';
+
+
+
+
 const LawyerDetails = () => {
     const LawyersData = useLoaderData();
-    // console.log(Lawyersdata)
+    
             // jei id er view details e click korchi sei id er value ta asbe 
     const {id} = useParams();
-    console.log(id, typeof(id))
+    // console.log(id, typeof(id))
             // jei id te click korchi sei er data khojar jonno find use korchi
     const singleLawyerData = LawyersData.find(lawyer => lawyer.id === parseInt(id));
-    console.log(singleLawyerData);
+ 
             // singleLawyerData er data destructure korchi
     const {name, licenseNo, workingExperience,photo,expert, visitPrice} = singleLawyerData || {};
+   const handleToast =() =>{
+    toast("added done")
+   }
+        //ui er jonno: book e click korle lawyer er data kono ekjaigate rakhbo
+//    const [lawyerBooking, setLawyeBooking] = useState([])
+   const handleBooking = (singlerLawyer) =>{
+    // setLawyeBooking([...lawyerBooking, singleLawyer])
+    addBooking(singlerLawyer)
+   }
+//    console.log(lawyerBooking)
 
     return (
         <div>
@@ -46,7 +63,7 @@ const LawyerDetails = () => {
                     <div className='flex gap-2'>
                         <p className='font-bold'>Consultation Fee:</p>
                                 {/* taka. 400 dewa ache visitPrice e: tai age split kore taka lekha bad dilam */}
-                        <p className='text-green-800 font-bold'>Taka: {visitPrice.split(" ")[1]}</p>
+                        <p className='text-green-800 font-bold'>Taka: {visitPrice}</p>
                     </div>
 
                     </div>
@@ -67,9 +84,21 @@ const LawyerDetails = () => {
                     <p className=''> 
                         Due to high patient volume, we are currently accepting appointments for today only. We appreciate your understanding and cooperation. </p>
                 </div>
-                <button href="#_" className="inline-flex items-center justify-center w-full px-8 py-3 text-lg font-bold leading-6 text-white bg-green-600 border border-transparent rounded-full hover:bg-green-500 focus:outline-none focus:ring-green-600 cursor-pointer">
+                <Link to='/booking'>
+                <button 
+                
+                    onClick={ ()=>{
+                        handleToast()
+                        handleBooking(singleLawyerData)
+                    }
+                    }
+
+                    href="#_" className="inline-flex items-center justify-center w-full px-8 py-3 text-lg font-bold leading-6 text-white bg-green-600 border border-transparent rounded-full hover:bg-green-500 focus:outline-none focus:ring-green-600 cursor-pointer">
                     Book Appointment Now
                 </button>
+                </Link>
+                
+
             </div>
         </div>
     );
