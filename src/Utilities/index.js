@@ -19,12 +19,11 @@ const removeBooking = (singleLawyer) =>{
     const bookingCart = getBooking();
     const remainingCart = bookingCart.filter(p =>p.id !== singleLawyer.id);
     localStorage.setItem("booking", JSON.stringify(remainingCart));
-    toast.warn(`Appointment form ${singleLawyer.name}removed`)
+    toast.warn(`Appointment form ${singleLawyer.name} removed`)
 }
 
 export {
     getBooking,
     addBooking,
     removeBooking,
-
 }
