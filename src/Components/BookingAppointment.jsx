@@ -1,6 +1,7 @@
 import React from 'react';
 
-const BookingAppointment = ({lawyer}) => {
+
+const BookingAppointment = ({lawyer,handleRemoveBooking}) => {
     const {name, expert, visitPrice,} = lawyer;
     return (
         <div>
@@ -12,6 +13,9 @@ const BookingAppointment = ({lawyer}) => {
                             </div>
                             <hr className='text-gray-500 border-dotted w-full my-3'/>
                             <button 
+                                onClick={()=>{
+                                            handleRemoveBooking(lawyer)
+                                        }}
                                 href="#_" className="inline-flex items-center justify-center w-full px-8 py-3 text-lg font-bold leading-6 text-red-700 hover:text-white border border-red-600 rounded-full hover:bg-red-500 focus:outline-none focus:ring-red-600 cursor-pointer">
                                 Cancel Appointment
                             </button>

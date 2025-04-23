@@ -1,4 +1,4 @@
-import {toast} from "react-hot-toast";
+import {toast} from 'react-toastify';
 
 
 const getBooking =()=>{
@@ -10,14 +10,21 @@ const getBooking =()=>{
 const addBooking = (singleLawyer) =>{
     const bookingCart = getBooking();
     const isExist = bookingCart.find(p => p.id === singleLawyer.id)
-    if(isExist) {toast("deleted") ; return console.log("added already") }
+    if(isExist) {toast.error("Appointment already scheduled") ; return console.log("added already") }
         bookingCart.push(singleLawyer);
-        toast.success("successfully added")
+        toast.success(`successfully shcedule for ${singleLawyer.name}  successfully`)
     localStorage.setItem("booking",JSON.stringify(bookingCart))
+}
+const removeBooking = (singleLawyer) =>{
+    const bookingCart = getBooking();
+    const remainingCart = bookingCart.filter(p =>p.id !== singleLawyer.id);
+    localStorage.setItem("booking", JSON.stringify(remainingCart));
+    toast.warn(`Appointment form ${singleLawyer.name}removed`)
 }
 
 export {
     getBooking,
     addBooking,
+    removeBooking,
 
 }

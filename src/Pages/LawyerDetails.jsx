@@ -1,11 +1,9 @@
 import React from 'react';
 import { Link, useLoaderData, useParams} from 'react-router';
 import exclamatoryImage from'../assets/exclamatory.png';
-import Button from '../Components/UI/Button';
-
 import { addBooking } from '../Utilities';
-import {toast} from 'react-toastify';
-// import toast from 'react-hot-toast';
+
+
 
 
 
@@ -21,9 +19,7 @@ const LawyerDetails = () => {
  
             // singleLawyerData er data destructure korchi
     const {name, licenseNo, workingExperience,photo,expert, visitPrice} = singleLawyerData || {};
-   const handleToast =() =>{
-    toast("added done")
-   }
+
         //ui er jonno: book e click korle lawyer er data kono ekjaigate rakhbo
 //    const [lawyerBooking, setLawyeBooking] = useState([])
    const handleBooking = (singlerLawyer) =>{
@@ -88,7 +84,6 @@ const LawyerDetails = () => {
                 <button 
                 
                     onClick={ ()=>{
-                        handleToast()
                         handleBooking(singleLawyerData)
                     }
                     }
