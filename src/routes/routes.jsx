@@ -14,25 +14,49 @@ export const router = createBrowserRouter([
         children:[
           {
             path:"/",
-            hydrateFallbackElement:<p>Loading......................................</p>,
+            hydrateFallbackElement:<div className="text-center">
+                                        <span className="loading loading-bars loading-xs"></span>
+                                        <span className="loading loading-bars loading-sm"></span>
+                                        <span className="loading loading-bars loading-md"></span>
+                                        <span className="loading loading-bars loading-lg"></span>
+                                        <span className="loading loading-bars loading-xl"></span>
+                                      </div>,
             element:<Home></Home>,
             loader: () => fetch("../Lawyers.json"),
           },
           {
             path: "/lawyer-details/:id",
-            hydrateFallbackElement:<p>Loading......................................</p>,
+            hydrateFallbackElement:<div className="text-center">
+                                        <span className="loading loading-bars loading-xs"></span>
+                                        <span className="loading loading-bars loading-sm"></span>
+                                        <span className="loading loading-bars loading-md"></span>
+                                        <span className="loading loading-bars loading-lg"></span>
+                                        <span className="loading loading-bars loading-xl"></span>
+                                      </div>,
             Component: LawyerDetails,
             loader: ()=>fetch("../Lawyers.json")
           },
           {
             path:"/blogs",
-            hydrateFallbackElement:<p>Q/A Loading......................................</p>,
+            hydrateFallbackElement:<div className="text-center">
+                                        <span className="loading loading-bars loading-xs"></span>
+                                        <span className="loading loading-bars loading-sm"></span>
+                                        <span className="loading loading-bars loading-md"></span>
+                                        <span className="loading loading-bars loading-lg"></span>
+                                        <span className="loading loading-bars loading-xl"></span>
+                                      </div>,
             Component: Blogs,
             loader: ()=>fetch("../quesAns.json")
           },
           {
+            hydrateFallbackElement:<div className="text-center">
+                                        <span className="loading loading-bars loading-xs"></span>
+                                        <span className="loading loading-bars loading-sm"></span>
+                                        <span className="loading loading-bars loading-md"></span>
+                                        <span className="loading loading-bars loading-lg"></span>
+                                        <span className="loading loading-bars loading-xl"></span>
+                                      </div>,
             path:"/booking",
-
             Component: Booking,
            
           },
