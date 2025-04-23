@@ -36,13 +36,12 @@ export const router = createBrowserRouter([
             Component: Booking,
            
           },
-
-          // {
-          //   path:"/error",
-          //   Component:ErrorPage
-          // }
         ]
       },
+        {
+          path:"/error",
+          Component:ErrorPage
+        },
         {
           path:"*",
           Component:ErrorPage
